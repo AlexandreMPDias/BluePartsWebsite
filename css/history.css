@@ -1,0 +1,29 @@
+
+#history_header_numbers{
+    min-width: 3em;
+}
+
+#history_last_change{
+    min-width: 15em;
+    column-span: 2;
+}
+
+#history-thead{
+    background-color: #A4A4A4;
+}
+
+.odd{
+    background-color: #D3D3D3;
+}
+
+.even{
+    background-color: white;
+}
+
+#history-undo{
+    margin-top: 5em;
+    margin-bottom: -1em;
+}
+
+
+

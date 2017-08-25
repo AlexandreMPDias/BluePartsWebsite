@@ -1,0 +1,9 @@
+#left-body{
+    float: left;
+}
+
+#right-body{
+    margin-left: 1em;
+    margin-right: 1em;
+    float:left;
+}

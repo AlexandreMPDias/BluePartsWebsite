@@ -1,0 +1,42 @@
+#filter-title{
+    font-size: 2.5em;
+	display: block;
+	padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5em;
+}
+
+#filter-table{
+    border-collapse: collapse;
+    padding-top: 0.5em;
+}
+
+.filter-row{
+    margin-top: 0.5em;
+    padding-top: 0.5;
+}
+
+#clear-filter{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.invisible{
+    display:none;
+}
+
+.invisible-side{
+    display:none;
+}
+
+.invisible-location{
+    display:none;
+}
+
+.invisible-name{
+    display:none;
+}
+
+.invisible-status{
+    display:none;
+}

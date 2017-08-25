@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <title>Blue Parts</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/colors.css">
+        <link rel="stylesheet" type="text/css" href="css/arrange.css">
+        <link rel="stylesheet" type="text/css" href="css/animation.css">
+        <link rel="stylesheet" type="text/css" href="css/history.css">
+        <link rel="stylesheet" type="text/css" href="css/filter.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+				<h1>Blue Parts</h1>
+			</div>
+        </header>
+        <nav id="right-body">
+                <h2 id="filter-title">Filter</h2>
+                <button id="clear-filter">Clear Fields</button>
+                <table id="filter_table">
+                    <tr class="filter-row" id="filter_side_tr">
+                        <td>Side:</td>
+                        <td><input type="text" name="filtro" id="filter_side"></input></td>
+                    </tr>
+                    <tr class="filter-row" id="filter_location_tr">
+                        <td>Location:</td>
+                        <td><input type="text" name="filtro" id="filter_location"></input></td>
+                    </tr>
+                    <tr class="filter-row" id="filter_name_tr">
+                        <td>Name:</td>
+                        <td><input type="text" name="filtro" id="filter_name"></input></td>
+                    </tr>
+                    <tr class="filter-row" id="filter_status_tr">
+                        <td>Status:</td>
+                        <td><input type="text" name="filtro" id="filter_status"></input></td>
+                    </tr>
+                </table>
+                <button id="history-undo">Undo</button>
+                <section>
+                    <table id="history-table">
+                        <thead id="history-thead">
+                            <tr>
+                                <td id="history_header_numbers"></td>
+                                <td id="history_last_change">Last Changes</id>
+                            </tr>
+                        </thead>
+                        <tbody id="history">
+                        </tbody>
+                    </table>
+                </section>
+            </nav>
+        <nav id="left-body">
+            <section class="container"> 
+                <h2>Peças</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Side</th>
+                                <th>Location</th>
+                                <th>Name</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        <tbody id="part-table">
+                            <tr class="part">
+                                <td class="side">Left</td>
+                                <td class="location">Shoulder</td>
+                                <td class="name">PivPotentio</td>
+                                <td class="state">Printed</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Right</td>
+                                <td class="location">Shoulder</td>
+                                <td class="name">PivPotentio</td>
+                                <td class="state">Printed</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Right</td>
+                                <td class="location">Wrist</td>
+                                <td class="name">rotawrist2</td>
+                                <td class="state">NOT YET PRINTED</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Left</td>
+                                <td class="location">Wrist</td>
+                                <td class="name">rotawrist2</td>
+                                <td class="state">Printed</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Left</td>
+                                <td class="location">Shoulder</td>
+                                <td class="name">PivPotentioHolder</td>
+                                <td class="state">Printed</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Right</td>
+                                <td class="location">Shoulder</td>
+                                <td class="name">PivPotentioHolder</td>
+                                <td class="state">Printed</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Right</td>
+                                <td class="location">Wrist</td>
+                                <td class="name">rotawrist3</td>
+                                <td class="state">NOT YET PRINTED</td>
+                            </tr>
+                            <tr class="part">
+                                <td class="side">Left</td>
+                                <td class="location">Wrist</td>
+                                <td class="name">rotawrist3</td>
+                                <td class="state">NOT YET PRINTED</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </section>
+            </nav>
+        </body>
+    <script language="JavaScript" type="text/javascript" src="js/Part.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/ChangesHistory.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/Table.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/undoButton.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/Filter.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/clickTable.js"></script>
+</html>

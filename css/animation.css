@@ -1,0 +1,9 @@
+.fadeOut{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.paint-red{
+    background-color: lightcoral;
+    transition: 0.5;
+}
