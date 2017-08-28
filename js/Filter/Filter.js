@@ -74,10 +74,10 @@ class Wrap{
 class Filter {
     constructor() {
       let S = document.querySelector.bind(document);
-      this._side = new Wrap(S('#filter_side'), 'side');
+      this._side = new Wrap(S('#filter_side_tr'), 'side');
       this._location = new Wrap(S('#filter_location'), 'location');
       this._name = new Wrap(S('#filter_name'), 'name');
-      this._status = new Wrap(S('#filter_status'), 'status');
+      this._status = new Wrap(S('#filter_status_tr'), 'status');
       this._invCheck = [];
       for(let i = 0; i < pTable.parts.length; i++){
           this._invCheck.push(new InvisibleCheck());
@@ -90,11 +90,11 @@ class Filter {
             for(let i = 0; i < pTable.parts.length; i++){
                 let part = new Part(pTable.parts[i]);
                 part.unhide();
-                //this._invCheck[i].reset();
+                this._invCheck[i].reset();
             }
         }
         else{
-            /*
+            
             for(let i = 0; i < pTable.parts.length; i++){
                 let part = new Part(pTable.parts[i]);
                 let regExp = new RegExp(wrap.filter.value, 'i');
@@ -107,8 +107,8 @@ class Filter {
                         part.unhide();
                     }
                 }
-            }*/
-            
+            }
+            /*
             console.log("Not all Fields are Clear");
             for(let i = 0; i < pTable.parts.length; i++){
                 let part = new Part(pTable.parts[i]);
@@ -120,7 +120,7 @@ class Filter {
                 else{
                     part.hide();
                 }
-            }
+            }*/
             
         }
     }
@@ -162,10 +162,10 @@ class Filter {
     }
 
     _addAllEvents(){
-        this._addEventListener(this._side);
+        //this._addEventListener(this._side);
         this._addEventListener(this._location);
         this._addEventListener(this._name);
-        this._addEventListener(this._status);
+        //this._addEventListener(this._status);
     }
 
     _isClear(wrap){

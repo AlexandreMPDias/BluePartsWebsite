@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/animation.css">
         <link rel="stylesheet" type="text/css" href="css/history.css">
         <link rel="stylesheet" type="text/css" href="css/filter.css">
+        <link rel="stylesheet" type="text/css" href="css/parttable.css">
 
     </head>
     <body>
@@ -23,30 +24,17 @@
                 <h2 id="filter-title">Filter</h2>
                 <button id="clear-filter">Clear Fields</button>
                 <table id="filter_table">
-                    <tr class="filter-row" id="filter_side_tr">
-                        <td>Side:</td>
-                        <td><input type="text" name="filtro" id="filter_side"></input></td>
-                    </tr>
-                    <tr class="filter-row" id="filter_location_tr">
-                        <td>Location:</td>
-                        <td><input type="text" name="filtro" id="filter_location"></input></td>
-                    </tr>
-                    <tr class="filter-row" id="filter_name_tr">
-                        <td>Name:</td>
-                        <td><input type="text" name="filtro" id="filter_name"></input></td>
-                    </tr>
-                    <tr class="filter-row" id="filter_status_tr">
-                        <td>Status:</td>
-                        <td><input type="text" name="filtro" id="filter_status"></input></td>
-                    </tr>
+                    <tr class="filter-row" id="filter_side_tr"></tr>
+                    <tr class="filter-row" id="filter_location_tr"></tr>
+                    <tr class="filter-row" id="filter_name_tr"></tr>
+                    <tr class="filter-row" id="filter_status_tr"></tr>
                 </table>
                 <button id="history-undo">Undo</button>
                 <section>
                     <table id="history-table">
                         <thead id="history-thead">
                             <tr>
-                                <td id="history_header_numbers"></td>
-                                <td id="history_last_change">Last Changes</id>
+                                <td colspan=2 id="history_last_change">Last Changes</td>
                             </tr>
                         </thead>
                         <tbody id="history">
@@ -57,7 +45,7 @@
         <nav id="left-body">
             <section class="container"> 
                 <h2>Peças</h2>
-                    <table>
+                    <table id="bodyandheader-part-table">
                         <thead>
                             <tr>
                                 <th>Side</th>
@@ -124,6 +112,8 @@
     <script language="JavaScript" type="text/javascript" src="js/ChangesHistory.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Table.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/undoButton.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/Filter.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/Filter/ButtonFields.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/Filter/filterCreator.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/Filter/Filter.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/clickTable.js"></script>
 </html>

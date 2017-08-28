@@ -1,11 +1,17 @@
 
+#history-table{
+    font-size: 1.2em;
+    border: 1px double #ccc;
+}
+
 #history_header_numbers{
     min-width: 3em;
 }
 
 #history_last_change{
-    min-width: 15em;
+    min-width: 20em;
     column-span: 2;
+    padding: 0.5em 0;
 }
 
 #history-thead{
@@ -20,9 +26,25 @@
     background-color: white;
 }
 
+#history_last_change{
+    border: 1px double #ccc;
+    text-align: center;
+}
+
 #history-undo{
     margin-top: 5em;
     margin-bottom: -1em;
+}
+
+.history_position{
+    border: 1px double #ccc;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+.history_change{
+    border: 1px double #ccc;
+    padding: 0em 1em;
 }
 
 

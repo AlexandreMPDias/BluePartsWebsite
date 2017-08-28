@@ -4,7 +4,7 @@
 
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 }
 
 header{
@@ -46,53 +46,19 @@ section h2{
 	margin-bottom: 0.5em;
 }
 
-table{
-	width: 100%;
-	margin-bottom : .5em;
-}
-
 label{
 	color: #555;
 	display: block;
 	margin-bottom: .2em;
 }
 
-td, th {
-	padding: .7em;
+th{
+    padding: .7em;
 	margin: 0;
 	border: 1px double #ccc;
 	text-align: center;
-}
-
-th{
 	font-weight: bold;
 	background-color: #EEE;
-}
-
-.part{
-	cursor: pointer;
-	white-space: nowrap;
-	user-select: none;
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */ 
-    border: 1px double rgb(204, 204, 204);
-}
-
-.side{
-    width: 10em;
-}
-
-.location{
-    width: 30em;
-}
-
-.name{
-    width: auto;
-}
-
-.state{
-    width: 30em;
 }
 
 button{

@@ -7,13 +7,15 @@
 }
 
 #filter-table{
-    border-collapse: collapse;
+    max-width: inherit;
+    width: 100%;
     padding-top: 0.5em;
 }
 
 .filter-row{
-    margin-top: 0.5em;
-    padding-top: 0.5;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-top: 1.5em;
 }
 
 #clear-filter{
@@ -25,18 +27,24 @@
     display:none;
 }
 
-.invisible-side{
-    display:none;
+.pressed{
+    background-color: lightcoral;
 }
 
-.invisible-location{
-    display:none;
+.filter_button{
+    outline:none;
+    width: 90%;
 }
 
-.invisible-name{
-    display:none;
+.filterTd{
+    width: 8em;
 }
 
-.invisible-status{
-    display:none;
+.filterInput{
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.filterLineTitle{
+    padding-right: 0.5em;
 }

@@ -59,8 +59,8 @@ class ChangesHistory{
         let td_part = tr.insertCell(1);
 
         tr.classList.add('history_entry');
-        td_pos.classList.add('position');
-        td_part.classList.add('change');
+        td_pos.classList.add('history_position');
+        td_part.classList.add('history_change');
 
         td_part.textContent = part.id ;
         td_pos.textContent = this._queue.length;
@@ -79,7 +79,7 @@ class ChangesHistory{
         let array = this._table.querySelectorAll('.history_entry');
         for(var i = 0; i < array.length; i++){
             let elem = array[i];
-            let pos = elem.querySelector('.position');
+            let pos = elem.querySelector('.history_position');
             pos.textContent = i + 1;
         }
     }

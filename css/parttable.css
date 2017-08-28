@@ -1,0 +1,46 @@
+#bodyandheader-part-table{
+	width: 100%;
+	margin-bottom : .5em;
+}
+
+.part{
+	cursor: pointer;
+	white-space: nowrap;
+	user-select: none;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */ 
+    border: 1px double rgb(204, 204, 204);
+}
+
+.side{
+    padding: .7em;
+	margin: 0;
+	border: 1px double #ccc;
+	text-align: center;
+    width: 10em;
+}
+
+.location{
+    padding: .7em;
+	margin: 0;
+	border: 1px double #ccc;
+	text-align: center;
+    width: 30em;
+}
+
+.name{
+    padding: .7em;
+	margin: 0;
+	border: 1px double #ccc;
+	text-align: center;
+    width: auto;
+}
+
+.state{
+    padding: .7em;
+	margin: 0;
+	border: 1px double #ccc;
+	text-align: center;
+    width: 30em;
+}
