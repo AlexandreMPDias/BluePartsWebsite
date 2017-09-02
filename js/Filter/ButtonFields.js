@@ -66,6 +66,12 @@ class ButtonFields{
             desButton.classList.remove('pressed');
         }
     }
+    
+    select(origin,button){
+        if(!button.classList.contains('pressed')){
+            this.switchState(origin,button);
+        }
+    }
         
     _getDeselect(origin, buttonID){
         let array = [];

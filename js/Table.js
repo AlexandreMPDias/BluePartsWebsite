@@ -1,6 +1,8 @@
 class Table{
 
     constructor(){
+        this.printedStringValue = 'Printed';
+        this.notprintedStringValue = 'NOT YET PRINTED';
         this._table = document.querySelector('#part-table');
         this._parts = this._table.querySelectorAll('.part');
     }

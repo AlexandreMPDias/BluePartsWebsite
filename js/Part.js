@@ -1,5 +1,5 @@
 class Part{
-
+    
     constructor(tr){
         this._part = tr;
         this._state = tr.querySelector('.state');
@@ -68,7 +68,7 @@ class Part{
     get id(){
         return this._simpleSide() + ", " + this.locationContent + ", " + this.nameContent;
     }
-
+    
     _simpleSide(){
         if(this.sideContent == "Right"){
             return 'R';
@@ -106,3 +106,4 @@ class Part{
         }
     }
 }
+
