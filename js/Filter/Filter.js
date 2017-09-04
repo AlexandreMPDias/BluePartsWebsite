@@ -22,8 +22,9 @@ class FilterMap extends Map{
     }
 }
 
-class Filter {
+class Filter extends VisiblePanel{
     constructor() {
+        super(document.querySelector('#filter'));
         this._map = new FilterMap();
     }
     
@@ -32,35 +33,50 @@ class Filter {
     }
     
     updateTable(target){
-        this._map.forEach(entry => {
-            let parent = target.parentNode.parentNode.id;
-            if(parent == 'filter_side_tr'){
-                entry.second.updateField('side');
-            } else if(parent == 'filter_status_tr'){
-                entry.second.updateField('status');
-            } else if(parent == 'filter_location_tr'){
-                entry.second.updateField('location');
-            } else if(parent == 'filter_name_tr'){
-                entry.second.updateField('name');
-            } else {
-                return;
-            }
-            if(entry.second.areAllFieldsVisible()){
-                entry.first.tr.classList.remove('invisible');
-            }
-            else{
-                if(!entry.first.tr.classList.contains('invisible')){
-                    entry.first.tr.classList.add('invisible');
+        this.updatePanel( () => {
+            this._map.forEach(entry => {
+                let parent = target.parentNode.parentNode.id;
+                if(parent == 'filter_side_tr'){
+                    entry.second.updateField('side');
+                } else if(parent == 'filter_status_tr'){
+                    entry.second.updateField('status');
+                } else if(parent == 'filter_location_tr'){
+                    entry.second.updateField('location');
+                } else if(parent == 'filter_name_tr'){
+                    entry.second.updateField('name');
+                } else {
+                    return;
                 }
-            }
+                if(entry.second.areAllFieldsVisible()){
+                    entry.first.tr.classList.remove('invisible');
+                }
+                else{
+                    if(!entry.first.tr.classList.contains('invisible')){
+                        entry.first.tr.classList.add('invisible');
+                    }
+                }
+            });
+        });
+    }
+    
+    _updateAll(){
+        this.updatePanel( () => {
+            this._map.forEach(entry => {
+                entry.second.updateField('side');
+                entry.second.updateField('status');
+                entry.second.updateField('location');
+                entry.second.updateField('name');
+            });
         });
     }
     
     resetTable(){
-        this._map.forEach(entry => {
-            entry.second = new SynchronizedFilter(entry.first);
-            entry.first.tr.classList.remove('invisible');
-        })
+        this.updatePanel( () => {
+            this._map.forEach(entry => {
+                entry.second = new SynchronizedFilter(entry.first);
+                entry.first.tr.classList.remove('invisible');
+            });
+        });
     }
 }
 

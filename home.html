@@ -20,7 +20,13 @@
 				<h1>Blue Parts</h1>
 			</div>
         </header>
+        <nav id='SH-buttons'>
+            <list id='list-SH-buttons'>
+                <button id='SH-filter'>Hide Filter</button>
+            </list>
+        </nav>
         <nav id="right-body">
+            <nav id="filter">
                 <h2 id="filter-title">Filter</h2>
                 <button id="clear-filter">Clear Fields</button>
                 <table id="filter-table">
@@ -29,21 +35,22 @@
                     <tr class="filter-row" id="filter_name_tr"></tr>
                     <tr class="filter-row" id="filter_status_tr"></tr>
                 </table>
-                <button id="history-undo">Undo</button>
-                <section>
-                    <table id="history-table">
-                        <thead id="history-thead">
-                            <tr>
-                                <td colspan=2 id="history_last_change">Last Changes</td>
-                            </tr>
-                        </thead>
-                        <tbody id="history">
-                        </tbody>
-                    </table>
-                </section>
+            </nav>
+            <button id="history-undo">Undo</button>
+            <section id="history">
+                <table id="history-table">
+                    <thead id="history-thead">
+                        <tr>
+                            <td colspan=2 id="history_last_change">Last Changes</td>
+                        </tr>
+                    </thead>
+                    <tbody id="history">
+                    </tbody>
+                </table>
+            </section>
             </nav>
         <nav id="left-body">
-            <section class="container"> 
+            <section class="container" id="parts"> 
                 <h2>Peças</h2>
                     <table id="bodyandheader-part-table">
                         <thead>
@@ -109,6 +116,7 @@
             </nav>
         </body>
     <script language="JavaScript" type="text/javascript" src="js/Part.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/VisiblePanel.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/ChangesHistory.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Table.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/undoButton.js"></script>
@@ -117,5 +125,5 @@
     <script language="JavaScript" type="text/javascript" src="js/Filter/ButtonFilter.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Filter/FieldFilter.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Filter/Filter.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/clickTable.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/ShowHideButtons.js"></script>
 </html>

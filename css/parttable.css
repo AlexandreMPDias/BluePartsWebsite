@@ -4,6 +4,7 @@
 }
 
 .part{
+    min-width: 5em;
 	cursor: pointer;
 	white-space: nowrap;
 	user-select: none;

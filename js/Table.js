@@ -1,9 +1,10 @@
-class Table{
+class Table extends VisiblePanel{
 
     constructor(){
+        super(document.querySelector('#parts'));
         this.printedStringValue = 'Printed';
         this.notprintedStringValue = 'NOT YET PRINTED';
-        this._table = document.querySelector('#part-table');
+        this._table = document.querySelector('#part-table')
         this._parts = this._table.querySelectorAll('.part');
     }
 
@@ -18,17 +19,23 @@ class Table{
             }
         });
     }
-
+    
     _addEventListener(){
-        this._table.addEventListener("click", function (event) {
-            event.preventDefault();
-            if(event.target.parentNode.id != "part-table" && event.target.id != "part-table"){
-                let part = new Part(event.target.parentNode);
-                part.changeState();
-                part.paint();
-                chHist.add(part.tr);
-            }
+        this._table.addEventListener("click", event => {
+            this.updatePanel(() => {
+                event.preventDefault();
+                if(event.target.parentNode.id != "part-table" && event.target.id != "part-table"){
+                    let part = new Part(event.target.parentNode);
+                    part.changeState();
+                    part.paint();
+                    chHist.add(part.tr);
+                }
+            });
         });
+    }
+    
+    addPart(part){
+        
     }
 
     get parts(){

@@ -1,8 +1,9 @@
-class ChangesHistory{
-
+class ChangesHistory extends VisiblePanel{
+    
     constructor(size){
+        super( document.querySelector('#history'));
         this._table = document.querySelector('#history-table');
-        this._body = this._table.querySelector('#history');
+        this._body = this._table.querySelector('#history')
         this._queue = [];
         this._showSize = size;
         this._maxSize = size * 100;

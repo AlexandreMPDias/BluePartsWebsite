@@ -9,9 +9,7 @@ class KeyListener{
     }
 
     _runCommands(event){
-        this.list.forEach(function(element){
-            element(event);
-        })
+        this.list.forEach(e => e(event));
     }
 
     setListener(doc,keystate){
