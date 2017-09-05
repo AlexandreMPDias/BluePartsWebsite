@@ -1,23 +1,44 @@
 class Table extends VisiblePanel{
 
     constructor(){
-        super(document.querySelector('#parts'));
+        super(document.querySelector('#parts'),'h');
         this.printedStringValue = 'Printed';
         this.notprintedStringValue = 'NOT YET PRINTED';
-        this._table = document.querySelector('#part-table')
-        this._parts = this._table.querySelectorAll('.part');
+        this._table = document.querySelector('#part-table');
     }
 
     _firstPaint(){
-        let p = this._parts;
-        p.forEach(function(tr){
+        for(let i = 0, tr; tr = this._table.rows[i]; i++){
             let state = tr.querySelector('.state');
             if(state.textContent === 'Printed') {
                 tr.classList.add('printed');
             } else {
                 tr.classList.add('not-printed');
             }
+        };
+    }
+
+    getPartsFromDB(){
+        firebase.database().ref("/").on("child_added", data => {
+            if(data.val().name != undefined){
+                //let part = new PartFactoryFromDB(data.val()).generateTr();
+                let part = new PartFactoryFromDB(data.val()).genAndAppend(this._table);
+                this._table.appendChild(part);
+                this.updateSize(this._table.rows.length * 29);
+                /*console.log(part.offsetHeight);
+                console.log(this._table.rows.length);
+                let state = part.querySelector('.state');
+                if(state.textContent === 'Printed') {
+                    part.classList.add('printed');
+                } else {
+                    part.classList.add('not-printed');
+                }*/
+            }
         });
+    }
+
+    listParts(){
+        this._parts.forEach(item => console.log(item));
     }
     
     _addEventListener(){
@@ -33,9 +54,9 @@ class Table extends VisiblePanel{
             });
         });
     }
-    
-    addPart(part){
-        
+
+    get _parts(){
+        return this._table.querySelectorAll('.part');
     }
 
     get parts(){
@@ -47,7 +68,17 @@ class Table extends VisiblePanel{
     }
 }
 
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
+
+var DB_DELAY = 5000;
 var chHist = new ChangesHistory(10);
 var pTable = new Table();
+pTable.getPartsFromDB();
+pTable._addEventListener()
 pTable._firstPaint();
-pTable._addEventListener();

@@ -22,7 +22,9 @@
         </header>
         <nav id='SH-buttons'>
             <list id='list-SH-buttons'>
-                <button id='SH-filter'>Hide Filter</button>
+                <button id='SH-filter' class="to_the_left">Hide Filter</button>
+                <button id='SH-history' class="to_the_left">Hide History</button>
+                <button id='SH-parts' class="to_the_right">Hide Parts</button>
             </list>
         </nav>
         <nav id="right-body">
@@ -36,8 +38,8 @@
                     <tr class="filter-row" id="filter_status_tr"></tr>
                 </table>
             </nav>
-            <button id="history-undo">Undo</button>
             <section id="history">
+                <button id="history-undo">Undo</button>
                 <table id="history-table">
                     <thead id="history-thead">
                         <tr>
@@ -58,64 +60,20 @@
                                 <th>Side</th>
                                 <th>Location</th>
                                 <th>Name</th>
-                                <th>State</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
-                        <tbody id="part-table">
-                            <tr class="part">
-                                <td class="side">Left</td>
-                                <td class="location">Shoulder</td>
-                                <td class="name">PivPotentio</td>
-                                <td class="state">Printed</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Right</td>
-                                <td class="location">Shoulder</td>
-                                <td class="name">PivPotentio</td>
-                                <td class="state">Printed</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Right</td>
-                                <td class="location">Wrist</td>
-                                <td class="name">rotawrist2</td>
-                                <td class="state">NOT YET PRINTED</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Left</td>
-                                <td class="location">Wrist</td>
-                                <td class="name">rotawrist2</td>
-                                <td class="state">Printed</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Left</td>
-                                <td class="location">Shoulder</td>
-                                <td class="name">PivPotentioHolder</td>
-                                <td class="state">Printed</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Right</td>
-                                <td class="location">Shoulder</td>
-                                <td class="name">PivPotentioHolder</td>
-                                <td class="state">Printed</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Right</td>
-                                <td class="location">Wrist</td>
-                                <td class="name">rotawrist3</td>
-                                <td class="state">NOT YET PRINTED</td>
-                            </tr>
-                            <tr class="part">
-                                <td class="side">Left</td>
-                                <td class="location">Wrist</td>
-                                <td class="name">rotawrist3</td>
-                                <td class="state">NOT YET PRINTED</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="part-table"></tbody>
                     </table> 
                 </section>
             </nav>
         </body>
+        
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Part.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/PartFactoryFromDB.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/data/Database_Firebase.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/data/Database.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/VisiblePanel.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/ChangesHistory.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Table.js"></script>
@@ -126,4 +84,5 @@
     <script language="JavaScript" type="text/javascript" src="js/Filter/FieldFilter.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/Filter/Filter.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/ShowHideButtons.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/After.js"></script>
 </html>

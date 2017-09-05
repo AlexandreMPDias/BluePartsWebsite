@@ -7,3 +7,16 @@
     margin-right: 1em;
     float:left;
 }
+
+.to_the_left{
+    width: fit-content;
+    float: left;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.to_the_right{
+    width: fit-content;
+    margin-left: 1em;
+    margin-right: 1em;
+}

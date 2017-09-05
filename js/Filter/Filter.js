@@ -16,15 +16,18 @@ class FilterMap extends Map{
     
     set(part){
         if(this.has(part.id)){
-            throw new Error('Key already inside the Map - [' + part.id + ']');
+            //throw new Error('Key already inside the Map - [' + part.id + ']');
+            console.log('Key already inside the Map - [' + part.id + ']');
         }
+        else{
         super.set(part.id,new Pair(part));
+        }
     }
 }
 
 class Filter extends VisiblePanel{
     constructor() {
-        super(document.querySelector('#filter'));
+        super(document.querySelector('#filter'),'width', 0.8);
         this._map = new FilterMap();
     }
     
@@ -78,14 +81,28 @@ class Filter extends VisiblePanel{
             });
         });
     }
+
+    addEvents(){
+        let filterTable = document.querySelector('#filter-table');
+        filter._populateMap();
+        setTimeout( () => {
+        filterTable.addEventListener('click', event => filter.updateTable(event.target));
+        document.getElementById('filter_location').addEventListener('input',  event => filter.updateTable(event.target));
+        document.getElementById('filter_name').addEventListener('input',  event => filter.updateTable(event.target));
+        }, DB_DELAY);
+    }
+
+    list(){
+        console.log(this._map.size)
+        this._map.forEach(entry => {
+            console.log(entry);
+        });
+    }
 }
 
 let filter = new Filter();
-let filterTable = document.querySelector('#filter-table');
-filter._populateMap();
-filterTable.addEventListener('click', event => filter.updateTable(event.target));
-document.getElementById('filter_location').addEventListener('input',  event => filter.updateTable(event.target));
-document.getElementById('filter_name').addEventListener('input',  event => filter.updateTable(event.target));
+filter.addEvents();
+filter.list();
 
 let filterButton = document.querySelector('#clear-filter');
 filterButton.addEventListener('click', event => {

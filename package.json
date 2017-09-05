@@ -1,0 +1,28 @@
+{
+  "name": "bluepartswebsite",
+  "version": "1.0.0",
+  "description": "Site for Listing all the Parts Blue requires",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreMPDias/BluePartsWebsite.git"
+  },
+  "keywords": [
+    "blue",
+    "part",
+    "list",
+    "print"
+  ],
+  "author": "Cyberlabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreMPDias/BluePartsWebsite/issues"
+  },
+  "homepage": "https://github.com/AlexandreMPDias/BluePartsWebsite#readme",
+  "dependencies": {
+    "firebase": "^4.3.0"
+  }
+}

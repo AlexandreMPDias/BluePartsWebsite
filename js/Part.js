@@ -73,8 +73,10 @@ class Part{
         if(this.sideContent == "Right"){
             return 'R';
         }
-        else{
+        else if(this.sideContent == "Left"){
             return 'L';
+        }else{
+            return ' ';
         }
     }
 
